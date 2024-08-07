@@ -1,0 +1,48 @@
+1)How I approached this Assignment
+
+1.Setup and Libraries: Imported necessary libraries like pandas, requests, BeautifulSoup, TextBlob, and nltk. Ensured nltk packages were downloaded.
+
+2.Data Reading: Loaded URLs from an input Excel file into a DataFrame.
+
+3.Article Extraction:
+
+a. Created a directory to save articles.
+b. Defined a function extract_article to fetch and parse articles from the URLs, extracting titles and paragraphs.
+c. Article Processing:
+d. Iterated through each URL, extracted the article, and saved it to a text file.
+
+4.Text Analysis:
+a. Defined functions to count syllables, compute various textual metrics (e.g., sentiment scores, average sentence length), and analyze text complexity.
+b. Loaded positive and negative words for sentiment analysis.
+c. Results Compilation:
+d. Analyzed each saved article and compiled metrics into a results list.
+
+5.Output:
+a. Converted the results into a DataFrame and saved them to both Excel and CSV files.
+
+
+2)How to run the .py file to generate output
+Prepare Your Environment:
+Ensure you have Python installed on your system. You can download it from python.org.
+Make sure you have the required libraries installed. You can install them using 'pip'
+
+place Input Files:
+Make sure Input.xlsx, positive-words.txt, and negative-words.txt are in the same directory as your script, or adjust the file paths in the script accordingly.
+Run the Script:
+
+Open a terminal or command prompt.
+Navigate to the directory where your script is located using the cd command.
+
+Run the script using Python:
+python script.py
+After the script finishes running, check the output files Output Data Structure.xlsx and Output Data Structure.csv in the same directory as your script for the results.
+
+3)Include all dependencies required
+import pandas as pd
+import os
+import requests
+from bs4 import BeautifulSoup
+from textblob import TextBlob
+import re
+import nltk
+
